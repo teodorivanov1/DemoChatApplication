@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Demo chat application</title>
+    <script src="Scripts/jquery-1.12.4.js"></script>
+    <script src="Scripts/jquery-ui-1.12.1.js"></script>
+    <script src="Scripts/jquery.signalR-1.0.1.js"></script>
+    <link href="Content/themes/base/base.css" rel="stylesheet" />
+    <link href="Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+    <link href="Content/themes/base/theme.css" rel="stylesheet" />
+    <link href="Content/themes/base/all.css" rel="stylesheet" />
+    <link href="Content/themes/base/jquery-ui.css" rel="stylesheet" />
+    <link href="Content/themes/base/tabs.css" rel="stylesheet" />
+    <link href="Content/themes/base/button.css" rel="stylesheet" />
+    <link href="Content/css/global.css" rel="stylesheet" />
+    <script src="/signalr/hubs"></script>
+    <script src="Scripts/Index.js"></script>
+</head>
+<body>
+    <input type="hidden" id="hConnectionId" value="" />
+    <input type="hidden" id="hNickname" value="" />
+
+    <div id="loginContainer">
+        <div class="login">
+            <div>
+                Nickname:<br />
+                <input id="txtNickName" type="text" />
+            </div>
+            <div>
+                <input id="btnJoin" type="button" class="ui-button ui-widget ui-corner-all" value="Join" />
+            </div>
+        </div>
+    </div>
+    <div id="chatContainer">
+        <div id="tabs-left">
+            <ul id="tabItems">
+                <li><a href="#tabs-1">Family</a></li>
+                <li><a href="#tabs-2">Friends</a></li>
+                <li><a href="#tabs-3">Work</a></li>
+            </ul>
+            <div id="tabs-1" class="tab-content">
+                <p>Welcome to the demo chat application</p>
+            </div>
+            <div id="tabs-2">
+                <p>Welcome to the demo chat application</p>
+            </div>
+            <div id="tabs-3">
+                <p>Welcome to the demo chat application</p>
+            </div>
+        </div>
+        <input type="text" id="txtMsg" style="width: 93%; height: 26px" />
+        <input type="button" id="btnSend" value="send" class="ui-button ui-widget ui-corner-all" />
+    </div>
+</body>
+</html>
